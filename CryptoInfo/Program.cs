@@ -10,6 +10,14 @@ namespace CryptoInfo
     {
         static void Main(string[] args)
         {
+            Crypto c = new Crypto();
+            while (true)
+            {
+                Console.WriteLine("¿tQue cryptocurrency quieres consultar?");
+                string currency = Console.ReadLine();
+                Task<double> t = c.getPrice(currency);
+                Console.WriteLine(t.GetAwaiter().GetResult());
+            }
         }
     }
 }
