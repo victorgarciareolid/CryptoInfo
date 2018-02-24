@@ -13,7 +13,7 @@ namespace CryptoInfo
             Crypto c = new Crypto();
             while (true)
             {
-                Console.WriteLine("¿tQue cryptocurrency quieres consultar?");
+                Console.WriteLine("¿Que criptomoneda quieres consultar?");
                 string currency = Console.ReadLine();
                 Task<double> t = c.getPrice(currency);
                 Console.WriteLine(t.GetAwaiter().GetResult());
